@@ -43,8 +43,8 @@ namespace Kaffemaschine
 
         public bool macheKaffee(double menge, double verhaeltnisWasserBohnen)
         {
-            double mengeBohnen = menge / (verhaeltnisWasserBohnen + 1) * verhaeltnisWasserBohnen;
-            double mengeWasser = menge - mengeBohnen;
+            double mengeWasser = menge / (verhaeltnisWasserBohnen + 1) * verhaeltnisWasserBohnen;
+            double mengeBohnen = menge - mengeWasser;
 
             if (mengeBohnen <= Kaffebohnen && mengeWasser <= Wasser)
             {
