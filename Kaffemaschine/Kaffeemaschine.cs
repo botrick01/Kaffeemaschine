@@ -1,19 +1,26 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Kaffemaschine
 {
-    public class Kaffemaschine
+    public class Kaffeemaschine
     {
+        [Key]
+        public int Id { get; set; }
         public double Wasser { get; private set; }
         public double Kaffebohnen { get; private set; }
         public double GesamtMengeKaffeProduziert { get; private set; }
 
+        public double Temperatur { get; private set; }
+
         private static double maxWasser = 2.5;
         private static double maxKaffebohnen = 2.5;
 
-        public Kaffemaschine (double Wasser = 0, double Kaffebohnen = 0, double GesamtMengeKaffeProduziert = 0)
+        public Kaffeemaschine (double Wasser = 0, double Kaffebohnen = 0, double GesamtMengeKaffeProduziert = 0, double Temperatur = 0)
         {
             this.Wasser = Wasser;
             this.Kaffebohnen = Kaffebohnen;
             this.GesamtMengeKaffeProduziert = GesamtMengeKaffeProduziert;
+            this.Temperatur = Temperatur;
         }
         public double wasserAuffuellen(double menge)
         {
